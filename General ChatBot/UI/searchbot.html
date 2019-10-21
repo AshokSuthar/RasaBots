@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <center><img src="images/cobot.jpg" height="80px" width="120px"/> </center>
+  <center><img src="images/comakeIT.png"/></center>
+  <div class="chat-container"></div>
+
+  <script src="javascript.js"/></script>
+  <script type="text/javascript">
+    var chatroom = window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Chat with coBot",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am Mike. How may I help you?",
+      speechRecognition: "en-US",
+      voiceLang: "en-US"
+    });
+    chatroom.openChat();
+  </script>
+</body>
